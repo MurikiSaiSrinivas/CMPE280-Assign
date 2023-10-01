@@ -1,338 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Math Question Page</title>
     <style>
-        .container{
-            border: 1px solid black;
-            border-radius: 8px;
-            max-width: 950px;
-        }
-        .head{
-            text-align: center;
-            padding: 5px 0px;
-            background-color: #C7CDD1;
-            border-radius: 8px 8px 0px 0px;
-        }
-        .problem{
-            padding: 2rem;
-            width:60%;
-        }
-        .options{
-            display: flex;
-            flex-wrap: wrap;
-            padding-left: 1rem;
-        }
-        .option{
-            display: flex;
-            align-items: center;
-            width: 40%;
-            margin: 2rem 2%;
-        }
+      .container {
+        border: 1px solid black;
+        border-radius: 8px;
+        max-width: 950px;
+      }
+      .head {
+        text-align: center;
+        padding: 5px 0px;
+        background-color: #c7cdd1;
+        border-radius: 8px 8px 0px 0px;
+      }
+      .problem {
+        padding: 2rem;
+        width: 60%;
+      }
+      .options {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 1rem;
+      }
+      .option {
+        display: flex;
+        align-items: center;
+        width: 40%;
+        margin: 2rem 2%;
+      }
 
-        input[type=button]{
-            background-color: transparent;
-            padding: 10px;
-            border-radius: 8px;
-            margin-right: 2rem;
-        }
-        input[type=radio]{
-            appearance: none;
-            -webkit-appearance: none;
-            border-radius: 50%;
-            background: black;
-            border: 3px solid #FFF;
-            box-shadow: 0 0 0 1px black;
-            width: 13px;
-            aspect-ratio: 1;
-        }
+      input[type="button"] {
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 8px;
+        margin-right: 2rem;
+      }
+      input[type="radio"] {
+        appearance: none;
+        -webkit-appearance: none;
+        border-radius: 50%;
+        background: black;
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 1px black;
+        width: 13px;
+        aspect-ratio: 1;
+      }
 
-        input[type=radio]:checked{
-            background: blue;
-            box-shadow: 0 0 0 1px blue;
-        }
+      input[type="radio"]:checked {
+        background: blue;
+        box-shadow: 0 0 0 1px blue;
+      }
 
-        @media screen and (max-width:750px) {
-            .option{
-                width: 100%;
-                margin: 2rem 0px;
-            }
-            .graph-part{
-                margin-right: 2vw;
-            }
+      @media screen and (max-width: 750px) {
+        .option {
+          width: 100%;
+          margin: 2rem 0px;
         }
-        .graph-grid{
-            display: flex;
+        .graph-part {
+          margin-right: 2vw;
+          display: flex;
+          align-items: center;
         }
-        .graph-part{
-            width: 30%;
-            display: flex;
-            align-items: center;
-        }
+      }
+      .graph-grid {
+        display: flex;
+      }
+      .graph-part {
+        width: 30%;
+        display: flex;
+        align-items: center;
+      }
 
-        .graph{
-            border-width: 0px 0px 3px 3px;
-            border-color: black;
-            border-style: solid;
-            aspect-ratio: 1;
-            width: 200px;
-            grid-area: 1/1;
-            overflow: hidden;
-            display: inline-block;
-        }
-        .grid-block{
-            display: grid;
-            width: fit-content;
-        }
-        .arrow{
-            border-color: black;
-            border-style: solid;
-            aspect-ratio: 1;
-            width: 8px;
-            grid-area: 1/1;
-        }
-        .down{
-            border-width: 0px 3px 3px 0px;
-            transform: rotate(-45deg);
-            margin-top: 196px;
-            margin-left: 190px;
-        }
-        .up{
-            border-width: 3px 0px 0px 3px;
-            transform: rotate(45deg);
-            margin-left: -4px;
-        }
-        .line{
-            border-bottom: 3px solid black;
-            width: 250px;
-            height: 0px;
-            transform: rotate(-45deg);
-            position: relative;
-            top: 111px;
-            left: -35px;
-        }
-        .dot{
-            aspect-ratio: 1;
-            width: 5px;
-            border-radius: 50%;
-            background-color: red;
-            position: relative;
-            z-index: 1;
-        }
-        .d-one{
-            top: 135px;
-            left: 60px;
-        }
-        .d-two{
-            top: 70px;
-            left: 120px;
-        }
-        .p1{
-            position: relative;
-            top: 134px;
-            left: 60px;
-        }
-        .p2{
-            position: relative;
-            top: 48px;
-            left: 125px;
-        }
+      .graph {
+        border-width: 0px 0px 3px 3px;
+        border-color: black;
+        border-style: solid;
+        aspect-ratio: 1;
+        width: 200px;
+        grid-area: 1/1;
+        overflow: hidden;
+        display: inline-block;
+      }
+      .grid-block {
+        display: grid;
+        width: fit-content;
+      }
+      .arrow {
+        border-color: black;
+        border-style: solid;
+        aspect-ratio: 1;
+        width: 8px;
+        grid-area: 1/1;
+      }
+      .down {
+        border-width: 0px 3px 3px 0px;
+        transform: rotate(-45deg);
+        margin-top: 196px;
+        margin-left: 190px;
+      }
+      .up {
+        border-width: 3px 0px 0px 3px;
+        transform: rotate(45deg);
+        margin-left: -4px;
+      }
+      .line {
+        border-bottom: 3px solid black;
+        width: 250px;
+        height: 0px;
+        transform: rotate(-45deg);
+        position: relative;
+        top: 111px;
+        left: -35px;
+      }
+      .dot {
+        aspect-ratio: 1;
+        width: 5px;
+        border-radius: 50%;
+        background-color: red;
+        position: relative;
+        z-index: 1;
+      }
+      .d-one {
+        top: 135px;
+        left: 60px;
+      }
+      .d-two {
+        top: 70px;
+        left: 120px;
+      }
+      .p1 {
+        position: relative;
+        top: 134px;
+        left: 60px;
+      }
+      .p2 {
+        position: relative;
+        top: 48px;
+        left: 125px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="head">
-            Question 1
-        </div>
-        <div class="graph-grid">
+      <div class="head">Question 1</div>
+      <div class="graph-grid">
         <div class="problem">
-            <div class="question">
-                Given points (x1,y1) and (x2,y2) select the formula to find the equation of the given line.
-            </div>
-        <div class="options">
+          <div class="question">
+            Given points (x1,y1) and (x2,y2) select the formula to find the
+            equation of the given line.
+          </div>
+          <div class="options">
             <div class="option">
-                <input type="radio" name="g1" id="op1">
-                <label for="op1">
+              <input type="radio" name="g1" id="op1" />
+              <label for="op1">
                 <!-- y=mx+b -->
-                    <math>
+                <math>
+                  <mrow>
+                    <mi>y</mi>
+                    <mo>=</mo>
                     <mrow>
-                       <mi>y</mi>
-                       <mo>=</mo>
-                       <mrow>
-                           <mi>m</mi>
-                           <mi>x</mi>
-                           <mo>+</mo>
-                           <mi>b</mi>
-                       </mrow>
+                      <mi>m</mi>
+                      <mi>x</mi>
+                      <mo>+</mo>
+                      <mi>b</mi>
                     </mrow>
-                    </math>
-                </label>
+                  </mrow>
+                </math>
+              </label>
             </div>
-        
+
             <div class="option">
-                <input type="radio" name="g1" id="op2">
-                <label for="op2">
+              <input type="radio" name="g1" id="op2" />
+              <label for="op2">
                 <!-- (x-h)^2 + (y-k)^2 = r^2 -->
-                    <math>
-                        <mrow>
-                            <msup>
-                                <mrow>
-                                    <mi>(</mi>
-                                    <mi>x</mi>
-                                    <mo>-</mo>
-                                    <mi>h</mi>
-                                    <mi>)</mi>
-                                </mrow>
-                                <mn>2</mn>
-                            </msup>
-                            <mo>+</mo>
-                            <msup>
-                                <mrow>
-                                    <mi>(</mi>
-                                    <mi>y</mi>
-                                    <mo>-</mo>
-                                    <mi>k</mi>
-                                    <mi>)</mi>
-                                </mrow>
-                                <mn>2</mn>
-                            </msup>
-                            <mo>=</mo>
-                            <msup>
-                                <mi>r</mi>
-                                <mn>2</mn>
-                            </msup>
-                        </mrow>
-                    </math>
-                </label>
-            </div>
-        
-            <div class="option">
-                <input type="radio" name="g1" id="op3">
-                <label for="op3">
-                    <!-- y-y1 = m(x-x1) -->
-                    <math>
-                    <mrow>
-                        <mi>y</mi>
-                        <mo>-</mo>
-                        <msub>
-                            <mi>y</mi>
-                            <mn>1</mn>
-                        </msub>
-                        <mo>=</mo>
-                        <mi>m</mi>
+                <math>
+                  <mrow>
+                    <msup>
+                      <mrow>
                         <mi>(</mi>
                         <mi>x</mi>
                         <mo>-</mo>
-                        <msub>
-                            <mi>x</mi>
-                            <mn>1</mn>
-                        </msub>
+                        <mi>h</mi>
                         <mi>)</mi>
-                    </mrow>
-                    </math>
-                </label>
-            </div>
-        
-            <div class="option">
-                <input type="radio" name="g1" id="op4">
-                <label for="op4">
-                    <!-- y-y2 = y2-y1 / x2-x1 (x-x2) -->
-                    <math>
-                    <mrow>
+                      </mrow>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>+</mo>
+                    <msup>
+                      <mrow>
+                        <mi>(</mi>
                         <mi>y</mi>
                         <mo>-</mo>
+                        <mi>k</mi>
+                        <mi>)</mi>
+                      </mrow>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>=</mo>
+                    <msup>
+                      <mi>r</mi>
+                      <mn>2</mn>
+                    </msup>
+                  </mrow>
+                </math>
+              </label>
+            </div>
+
+            <div class="option">
+              <input type="radio" name="g1" id="op3" />
+              <label for="op3">
+                <!-- y-y1 = m(x-x1) -->
+                <math>
+                  <mrow>
+                    <mi>y</mi>
+                    <mo>-</mo>
+                    <msub>
+                      <mi>y</mi>
+                      <mn>1</mn>
+                    </msub>
+                    <mo>=</mo>
+                    <mi>m</mi>
+                    <mi>(</mi>
+                    <mi>x</mi>
+                    <mo>-</mo>
+                    <msub>
+                      <mi>x</mi>
+                      <mn>1</mn>
+                    </msub>
+                    <mi>)</mi>
+                  </mrow>
+                </math>
+              </label>
+            </div>
+
+            <div class="option">
+              <input type="radio" name="g1" id="op4" />
+              <label for="op4">
+                <!-- y-y2 = y2-y1 / x2-x1 (x-x2) -->
+                <math>
+                  <mrow>
+                    <mi>y</mi>
+                    <mo>-</mo>
+                    <msub>
+                      <mi>y</mi>
+                      <mn>2</mn>
+                    </msub>
+                    <mo>=</mo>
+                    <mfrac>
+                      <mrow>
                         <msub>
-                            <mi>y</mi>
-                            <mn>2</mn>
+                          <mi>y</mi>
+                          <mn>2</mn>
                         </msub>
-                        <mo>=</mo>
-                        <mfrac>
-                            <mrow>
-                                <msub>
-                                    <mi>y</mi>
-                                    <mn>2</mn>
-                                </msub>
-                                <mo>-</mo>
-                                <msub>
-                                    <mi>y</mi>
-                                    <mn>1</mn>
-                                </msub>
-                            </mrow>
-                            <mrow>
-                                <msub>
-                                    <mi>x</mi>
-                                    <mn>2</mn>
-                                </msub>
-                                <mo>-</mo>
-                                <msub>
-                                    <mi>x</mi>
-                                    <mn>1</mn>
-                                </msub>
-                            </mrow>
-                        </mfrac>
-                        <mi>(</mi>
-                        <mi>x</mi>
                         <mo>-</mo>
                         <msub>
-                            <mi>x</mi>
-                            <mn>2</mn>
+                          <mi>y</mi>
+                          <mn>1</mn>
                         </msub>
-                        <mi>)</mi>
-                    </mrow>
-                    </math>
-                </label>
+                      </mrow>
+                      <mrow>
+                        <msub>
+                          <mi>x</mi>
+                          <mn>2</mn>
+                        </msub>
+                        <mo>-</mo>
+                        <msub>
+                          <mi>x</mi>
+                          <mn>1</mn>
+                        </msub>
+                      </mrow>
+                    </mfrac>
+                    <mi>(</mi>
+                    <mi>x</mi>
+                    <mo>-</mo>
+                    <msub>
+                      <mi>x</mi>
+                      <mn>2</mn>
+                    </msub>
+                    <mi>)</mi>
+                  </mrow>
+                </math>
+              </label>
             </div>
-        
-        </div>
-            <div class="answer">
-                <input type="button" value="Submit & Next Question">
-                <input type="button" value="Cancel & Clear Selection">
-            </div>
+          </div>
+          <div class="answer">
+            <input type="button" value="Submit & Next Question" />
+            <input type="button" value="Cancel & Clear Selection" />
+          </div>
         </div>
         <div class="graph-part">
-            <div class="grid-block">
-                <div class="graph">
-                    <div class="line"></div>
-                    <div class="dot d-one"></div>
-                    <div class="dot d-two"></div>
-                    <div class="p1">
-                        <math>
-                            <mi>(</mi>
-                            <msub>
-                                <mi>x</mi>
-                                <mn>1</mn>
-                            </msub>
-                            <mo>,</mo>
-                            <msub>
-                                <mi>y</mi>
-                                <mn>1</mn>
-                            </msub>
-                            <mi>)</mi>
-                        </math>
-                    </div>
-                    <div class="p2">
-                        <math>
-                            <mi>(</mi>
-                            <msub>
-                                <mi>x</mi>
-                                <mn>2</mn>
-                            </msub>
-                            <mo>,</mo>
-                            <msub>
-                                <mi>y</mi>
-                                <mn>2</mn>
-                            </msub>
-                            <mi>)</mi>
-                        </math>
-                    </div>
-                </div>
-                <div class="up arrow"></div>
-                <div class="down arrow"></div>
+          <div class="grid-block">
+            <div class="graph">
+              <div class="line"></div>
+              <div class="dot d-one"></div>
+              <div class="dot d-two"></div>
+              <div class="p1">
+                <math>
+                  <mi>(</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mn>1</mn>
+                  </msub>
+                  <mo>,</mo>
+                  <msub>
+                    <mi>y</mi>
+                    <mn>1</mn>
+                  </msub>
+                  <mi>)</mi>
+                </math>
+              </div>
+              <div class="p2">
+                <math>
+                  <mi>(</mi>
+                  <msub>
+                    <mi>x</mi>
+                    <mn>2</mn>
+                  </msub>
+                  <mo>,</mo>
+                  <msub>
+                    <mi>y</mi>
+                    <mn>2</mn>
+                  </msub>
+                  <mi>)</mi>
+                </math>
+              </div>
             </div>
+            <div class="up arrow"></div>
+            <div class="down arrow"></div>
+          </div>
         </div>
-        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

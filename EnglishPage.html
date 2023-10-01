@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Page</title>
+    <style>
+      .container {
+        border: 1px solid black;
+        border-radius: 8px;
+        max-width: 950px;
+      }
+      .head {
+        text-align: center;
+        padding: 5px 0px;
+        background-color: #c7cdd1;
+        border-radius: 8px 8px 0px 0px;
+      }
+      .problem {
+        padding: 2rem;
+        width: 60%;
+      }
+      .options {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 1rem;
+      }
+      .option {
+        display: flex;
+        align-items: center;
+        width: 40%;
+        margin: 2rem 2%;
+      }
+
+      input[type="button"] {
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 8px;
+        margin-right: 2rem;
+      }
+      input[type="radio"] {
+        appearance: none;
+        -webkit-appearance: none;
+        border-radius: 50%;
+        background: black;
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 1px black;
+        width: 13px;
+        aspect-ratio: 1;
+      }
+
+      input[type="radio"]:checked {
+        background: blue;
+        box-shadow: 0 0 0 1px blue;
+      }
+
+      @media screen and (max-width: 750px) {
+        .option {
+          width: 100%;
+          margin: 2rem 0px;
+        }
+        .right-part {
+          margin-right: 2vw;
+          display: flex;
+          align-items: center;
+        }
+      }
+      .graph-grid {
+        display: flex;
+      }
+      .right-part {
+        width: 40%;
+        margin-top: 1rem;
+        margin-right: 1rem;
+      }
+      .video {
+        display: flex;
+        flex-direction: column;
+      }
+      #source {
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">Question 3</div>
+      <div class="graph-grid">
+        <div class="problem">
+          <div class="question">
+            As per the latest twitter news, complete the article snippet given
+            by selecting appropriate choices for the blanks.
+          </div>
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="g1" id="op1" />
+              <label for="op1"> Option 1 Mark 1: $650 </label>
+            </div>
+
+            <div class="option">
+              <input type="radio" name="g2" id="op2" />
+              <label for="op2"> Option 1 Mark 2: Twitter </label>
+            </div>
+
+            <div class="option">
+              <input type="radio" name="g1" id="op3" />
+              <label for="op3"> Option 2 Mark 1: $550 </label>
+            </div>
+
+            <div class="option">
+              <input type="radio" name="g2" id="op4" />
+              <label for="op4"> Option 2 Mark 2: Google </label>
+            </div>
+
+            <div class="option">
+              <input type="radio" name="g1" id="op5" />
+              <label for="op5"> Option 3 Mark 1: $650 </label>
+            </div>
+
+            <div class="option">
+              <input type="radio" name="g2" id="op6" />
+              <label for="op6"> Option 3 Mark 2: Facebook </label>
+            </div>
+          </div>
+          <div class="answer">
+            <input type="button" value="Submit & Next Question" />
+            <input type="button" value="Cancel & Clear Selection" />
+          </div>
+        </div>
+        <div class="right-part">
+          <div class="video">
+            <p>
+              "<br />
+              Twitter wants more cash. The ompany announced two
+              <mark>$______</mark> million debt offerings in a filling today,
+              each with a potential $100 increase provided that the sales are
+              oversubscribed. Assuimng full tip, including the $100 million
+              boosters<mark> ______</mark> will raise up to $i.5billion with the
+              two offerings. <br />"
+            </p>
+            <p id="source">
+              Source:
+              http://techcrunch.com/2014/09/10/twitter-to-raise-up-to-1-5b-in-debt-offering/
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

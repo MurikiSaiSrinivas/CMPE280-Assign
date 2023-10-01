@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Page</title>
+    <style>
+      .container {
+        border: 1px solid black;
+        border-radius: 8px;
+        max-width: 950px;
+      }
+      .head {
+        text-align: center;
+        padding: 5px 0px;
+        background-color: #c7cdd1;
+        border-radius: 8px 8px 0px 0px;
+      }
+
+      input[type="button"] {
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 8px;
+        margin-right: 3rem;
+        margin-top: 1rem;
+      }
+      .survey {
+        margin: 1rem;
+        padding: 1rem;
+      }
+      .label-at-top {
+        display: flex;
+        align-items: start;
+        width: 100%;
+        gap: 10px;
+      }
+      textarea {
+        /* height: 200px; */
+        overflow-y: scroll;
+      }
+      #room-label {
+        margin-left: 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">Survey</div>
+      <div class="survey">
+        <p>How did you like the center?</p>
+        <br />
+        <div class="label-at-top">
+          <label for="comments">Comments:</label>
+          <textarea name="comments" id="comments" cols="80" rows="7"></textarea>
+        </div>
+        <h3>Select Text Area Location:</h3>
+        <label for="city">City:</label>
+        <input list="city" name="city" />
+        <datalist id="city">
+          <option value="San Jose"></option>
+          <option value="San Fransico"></option>
+          <option value="Mountain View"></option>
+          <option value="Palo Alto"></option>
+          <option value="Freemount"></option>
+        </datalist>
+
+        <label for="room" id="room-label">Room Number#:</label>
+        <input list="room" name="room" />
+        <datalist id="room">
+          <option value="Room 210"></option>
+          <option value="Room 110"></option>
+          <option value="Room 410"></option>
+          <option value="Room 337"></option>
+          <option value="Room 510"></option>
+        </datalist>
+
+        <br />
+        <input type="button" value="Submit & Next Question" />
+        <input type="button" value="Cancel & Clear Selection" />
+      </div>
+    </div>
+  </body>
+</html>

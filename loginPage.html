@@ -1,95 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
     <style>
-        body{
-            font-family: "Lato","Helvetica Neue";
-            font-size: 16px;
-            line-height: "24px";
-            font-weight: 600;
-        }
-        .container{
-            border: 1px solid black;
-            border-radius: 8px;
-            max-width: 400px;
-        }
-        .head{
-            text-align: center;
-            padding: 5px 0px;
-            background-color: #C7CDD1;
-            border-radius: 8px 8px 0px 0px;
-        }
-        .body{
-            margin: 2rem;
-            width: 80%;
-        }
-        .row{
-            display: flex;
-            justify-content: space-between;
-            margin: 20px;
-        }
-        .login-btn{
-            background-color: transparent;
-            width: fit-content;
-            font-size: 16px;
-            display: flex;
-        }
-        .row a{
-            color: #153BFF;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .left-circle{
-            height: 20px;
-            width: 10px;
-            border-top-left-radius: 21px;  /* 20px of height + 1px of border */
-            border-bottom-left-radius: 21px; /* 20px of height + 1px of border */
-            border: 2px solid black;
-            border-right: 0;
-        }
-        .text{
-            border-width: 2px 0px 2px 0px;
-            border-color: black;
-            border-style: solid;
-        }
-        .right-circle{
-            height: 20px;
-            width: 10px;
-            border-top-right-radius: 21px;  /* 20px of height + 1px of border */
-            border-bottom-right-radius: 21px; /* 20px of height + 1px of border */
-            border: 2px solid black;
-            border-left: 0;
-        }
+      body {
+        font-family: "Lato", "Helvetica Neue";
+        font-size: 16px;
+        line-height: "24px";
+        font-weight: 600;
+      }
+      .container {
+        border: 1px solid black;
+        border-radius: 8px;
+        max-width: 400px;
+      }
+      .head {
+        text-align: center;
+        padding: 5px 0px;
+        background-color: #c7cdd1;
+        border-radius: 8px 8px 0px 0px;
+      }
+      .body {
+        margin: 2rem;
+        width: 80%;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+      }
+      .login-btn {
+        background-color: transparent;
+        width: fit-content;
+        font-size: 16px;
+        display: flex;
+      }
+      .row a {
+        color: #153bff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .left-circle {
+        height: 20px;
+        width: 10px;
+        border-top-left-radius: 21px; /* 20px of height + 1px of border */
+        border-bottom-left-radius: 21px; /* 20px of height + 1px of border */
+        border: 2px solid black;
+        border-right: 0;
+      }
+      .text {
+        border-width: 2px 0px 2px 0px;
+        border-color: black;
+        border-style: solid;
+      }
+      .right-circle {
+        height: 20px;
+        width: 10px;
+        border-top-right-radius: 21px; /* 20px of height + 1px of border */
+        border-bottom-right-radius: 21px; /* 20px of height + 1px of border */
+        border: 2px solid black;
+        border-left: 0;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="center">
-        <div class="container">
-            <div class="head">
-                User Login
+      <div class="container">
+        <div class="head">User Login</div>
+        <div class="body">
+          <div class="row">
+            <label for="name">Username:</label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div class="row">
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password" />
+          </div>
+          <div class="row">
+            <a href="">Create Account/Forgot?</a>
+            <div class="login-btn">
+              <div class="left-circle"></div>
+              <div class="text">Login</div>
+              <div class="right-circle"></div>
             </div>
-            <div class="body">
-                <div class="row">
-                    <label for="name">Username:</label>
-                    <input type="text" id="name" name="name">
-                </div>
-                <div class="row">
-                    <label for="password">Password:</label>
-                    <input type="text" id="password" name="password">
-                </div>
-                <div class="row">
-                    <a href="">Create Account/Forgot?</a>
-                    <div class="login-btn">
-                        <div class="left-circle"></div>
-                        <div class="text"> Login</div>
-                        <div class="right-circle"></div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
