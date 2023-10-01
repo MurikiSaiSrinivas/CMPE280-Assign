@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosine Page</title>
+    <style>
+        .container{
+            border: 1px solid black;
+            border-radius: 8px;
+            max-width: 950px;
+        }
+        .head{
+            text-align: center;
+            padding: 5px 0px;
+            background-color: #C7CDD1;
+            border-radius: 8px 8px 0px 0px;
+        }
+        .problem{
+            padding: 2rem;
+        }
+        .options{
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 1rem;
+        }
+        .option{
+            display: flex;
+            align-items: center;
+            width: 40%;
+            margin: 2rem 2%;
+        }
+
+        input[type=button]{
+            background-color: transparent;
+            padding: 10px;
+            border-radius: 8px;
+            margin-right: 2rem;
+        }
+
+        input[type=radio]{
+            appearance: none;
+            -webkit-appearance: none;
+            border-radius: 50%;
+            background: black;
+            border: 3px solid #FFF;
+            box-shadow: 0 0 0 1px black;
+            width: 13px;
+            height: 13px;
+        }
+
+        input[type=radio]:checked{
+            background: blue;
+            box-shadow: 0 0 0 1px blue;
+        }
+
+        @media screen and (max-width:850px) {
+            .option{
+                width: 100%;
+                margin: 2rem 0px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            Question 2
+        </div>
+        <div class="problem">
+        <div class="question">
+            Select the cosine theorem formula.
+        </div>
+        <div class="options">
+            <div class="option">
+                <input type="radio" name="g1" id="op1">
+                <label for="op1">
+                    <!-- cos(alpha +- beta) = cos aplha cos beta -+ sin alpha sin beta -->
+                <math>
+                 <mrow>
+                    <mo>cos</mo>
+                    <mi>(</mi>
+                    <mi>&alpha;</mi>
+                    <mo>&PlusMinus;</mo>
+                    <mi>&beta;</mi>
+                    <mi>)</mi>
+                    <mo>=</mo>
+                    <mo>cos</mo>
+                    <mi>&alpha;</mi>
+                    <mo>cos</mo>
+                    <mi>&beta;</mi>
+                    <mo>&MinusPlus;</mo>
+                    <mo>sin</mo>
+                    <mi>&alpha;</mi>
+                    <mo>sin</mo>
+                    <mi>&beta;</mi>
+                 </mrow>
+                </math>
+                </label>
+            </div>
+
+            <div class="option">
+                <input type="radio" name="g1" id="op2">
+                <label for="op2">
+                <!-- sin(alpha +- beta) = sin aplha cos beta +- cos alpha sin beta -->
+                    <math>
+                    <mrow>
+                        <mo>sin</mo>
+                        <mi>(</mi>
+                        <mi>&alpha;</mi>
+                        <mo>&PlusMinus;</mo>
+                        <mi>&beta;</mi>
+                        <mi>)</mi>
+                        <mo>=</mo>
+                        <mo>sin</mo>
+                        <mi>&alpha;</mi>
+                        <mo>cos</mo>
+                        <mi>&beta;</mi>
+                        <mo>&PlusMinus;</mo>
+                        <mo>cos</mo>
+                        <mi>&alpha;</mi>
+                        <mo>sin</mo>
+                        <mi>&beta;</mi>
+                    </mrow>
+                    </math>
+                </label>
+            </div>
+
+            <div class="option">
+                <input type="radio" name="g1" id="op3">
+                <label for="op3">
+                <!-- sin alpha + sin beta =  2sin(alpha + beta / 2) cos(alpha - beta / 2) -->
+                    <math>
+                    <mrow>
+                        <mo>sin</mo>
+                        <mi>&alpha;</mi>
+                        <mo>+</mo>
+                        <mo>sin</mo>
+                        <mi>&beta;</mi>
+                        <mo>=</mo>
+                        <mn>2</mn>
+                        <mo>sin</mo>
+                        <mo>(</mo>
+                        <mfrac>
+                            <mrow>
+                                <mi>&alpha;</mi>
+                                <mo>+</mo>
+                                <mi>&beta;</mi>
+                            </mrow>
+                            <mn>2</mn>
+                        </mfrac>
+                        <mo>)</mo>
+                        <mo>cos</mo>
+                        <mo>(</mo>
+                        <mfrac>
+                            <mrow>
+                                <mi>&alpha;</mi>
+                                <mo>-</mo>
+                                <mi>&beta;</mi>
+                            </mrow>
+                            <mn>2</mn>
+                        </mfrac>
+                        <mo>)</mo>
+                    </mrow>
+                    </math>
+                </label>
+            </div>
+
+            <div class="option">
+                <input type="radio" name="g1" id="op4">
+                <label for="op4">
+                <!-- sin alpha - sin beta =  2cos(alpha + beta / 2) sin(alpha - beta / 2) -->
+                    <math>
+                     <mrow>
+                         <mo>sin</mo>
+                         <mi>&alpha;</mi>
+                         <mo>-</mo>
+                         <mo>sin</mo>
+                         <mi>&beta;</mi>
+                         <mo>=</mo>
+                         <mn>2</mn>
+                         <mo>cos</mo>
+                         <mo>(</mo>
+                         <mfrac>
+                             <mrow>
+                                 <mi>&alpha;</mi>
+                                 <mo>+</mo>
+                                 <mi>&beta;</mi>
+                             </mrow>
+                             <mn>2</mn>
+                         </mfrac>
+                         <mo>)</mo>
+                         <mo>sin</mo>
+                         <mo>(</mo>
+                         <mfrac>
+                             <mrow>
+                                 <mi>&alpha;</mi>
+                                 <mo>-</mo>
+                                 <mi>&beta;</mi>
+                             </mrow>
+                             <mn>2</mn>
+                         </mfrac>
+                         <mo>)</mo>
+                     </mrow>
+                    </math>
+                </label>
+            </div>
+
+        </div>
+        <div class="answer">
+            <input type="button" value="Submit & Next Question">
+            <input type="button" value="Cancel & Clear Selection">
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>
