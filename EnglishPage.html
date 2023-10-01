@@ -28,7 +28,7 @@
       .option {
         display: flex;
         align-items: center;
-        width: 40%;
+        width: 100%;
         margin: 2rem 2%;
       }
 
@@ -80,6 +80,17 @@
       #source {
         font-size: 14px;
       }
+      mark {
+        cursor: pointer;
+      }
+      #m1 {
+        visibility: visible;
+        width: fit-content;
+      }
+      #m2 {
+        visibility: hidden;
+        /* width: 1%; */
+      }
     </style>
   </head>
   <body>
@@ -92,34 +103,38 @@
             by selecting appropriate choices for the blanks.
           </div>
           <div class="options">
-            <div class="option">
-              <input type="radio" name="g1" id="op1" />
-              <label for="op1"> Option 1 Mark 1: $650 </label>
+            <div id="m1">
+              <div class="option">
+                <input type="radio" name="g1" id="op1" />
+                <label for="op1"> Option 1 Mark 1: $650 </label>
+              </div>
+
+              <div class="option">
+                <input type="radio" name="g1" id="op3" />
+                <label for="op3"> Option 2 Mark 1: $550 </label>
+              </div>
+
+              <div class="option">
+                <input type="radio" name="g1" id="op5" />
+                <label for="op5"> Option 3 Mark 1: $650 </label>
+              </div>
             </div>
 
-            <div class="option">
-              <input type="radio" name="g2" id="op2" />
-              <label for="op2"> Option 1 Mark 2: Twitter </label>
-            </div>
+            <div id="m2">
+              <div class="option">
+                <input type="radio" name="g2" id="op2" />
+                <label for="op2"> Option 1 Mark 2: Twitter </label>
+              </div>
 
-            <div class="option">
-              <input type="radio" name="g1" id="op3" />
-              <label for="op3"> Option 2 Mark 1: $550 </label>
-            </div>
+              <div class="option">
+                <input type="radio" name="g2" id="op4" />
+                <label for="op4"> Option 2 Mark 2: Google </label>
+              </div>
 
-            <div class="option">
-              <input type="radio" name="g2" id="op4" />
-              <label for="op4"> Option 2 Mark 2: Google </label>
-            </div>
-
-            <div class="option">
-              <input type="radio" name="g1" id="op5" />
-              <label for="op5"> Option 3 Mark 1: $650 </label>
-            </div>
-
-            <div class="option">
-              <input type="radio" name="g2" id="op6" />
-              <label for="op6"> Option 3 Mark 2: Facebook </label>
+              <div class="option">
+                <input type="radio" name="g2" id="op6" />
+                <label for="op6"> Option 3 Mark 2: Facebook </label>
+              </div>
             </div>
           </div>
           <div class="answer">
@@ -132,11 +147,11 @@
             <p>
               "<br />
               Twitter wants more cash. The ompany announced two
-              <mark>$______</mark> million debt offerings in a filling today,
-              each with a potential $100 increase provided that the sales are
-              oversubscribed. Assuimng full tip, including the $100 million
-              boosters<mark> ______</mark> will raise up to $i.5billion with the
-              two offerings. <br />"
+              <mark onclick="mark1()">$______</mark> million debt offerings in a
+              filling today, each with a potential $100 increase provided that
+              the sales are oversubscribed. Assuimng full tip, including the
+              $100 million boosters<mark onclick="mark2()"> ______</mark> will
+              raise up to $i.5billion with the two offerings. <br />"
             </p>
             <p id="source">
               Source:
@@ -147,4 +162,18 @@
       </div>
     </div>
   </body>
+  <script>
+    function mark1() {
+      document.querySelector("#m1").style.visibility = "visible";
+      // document.querySelector("#m1").style.width = "70%";
+      document.querySelector("#m2").style.visibility = "hidden";
+      // document.querySelector("#m2").style.width = "5%";
+    }
+    function mark2() {
+      document.querySelector("#m1").style.visibility = "hidden";
+      // document.querySelector("#m1").style.width = "5%";
+      document.querySelector("#m2").style.visibility = "visible";
+      // document.querySelector("#m2").style.width = "70%";
+    }
+  </script>
 </html>
